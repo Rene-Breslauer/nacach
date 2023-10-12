@@ -1,0 +1,14 @@
+{% assign metafields-data = '[' %}
+{%for variant in product.variants%}
+{% assign metafield-value = variant.metafields.pricepl.priceperlb
+| replace: '"', "''" %}
+{% assign metafields-data = metafields-data | append:
+'{"variant_id":"' | append: variant.id| append: '" ,
+"metafield_value":"' | append: metafield-value | append: '"},' %}
+{%endfor%}
+{% assign metafields-data = metafields-data | append: ']'%}
+{% assign metafields-data = metafields-data | replace: ",]", "]"%}
+
+<span id="hidden-variant-metafields-container"
+style="display:none;">{{metafields-data}}</span>
+<span id="hidden-current-variant-metafield" style="display:none;"></span>

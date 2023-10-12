@@ -1,0 +1,72 @@
+{%- capture html_tabs -%}  
+{%- for block in section.blocks -%}
+{%- assign b_i = block.settings -%}
+{%- case block.type -%}
+  {%- when 'tab_desc' -%}
+    <div class="tt-item{% if b_i.open_tab_by_default %} active{% endif %}">
+      <div class="tt-collapse-title"{% if b_i.title == "" %} style="pointer-events: none; padding-bottom: 0px;"{% endif %}>
+        <span class="tt-collapse-title_label">{{ b_i.title }}</span>
+        <span class="tt-icon tt-icon-minus">
+          {% include 'icon-minus'%}
+        </span>
+        <span class="tt-icon tt-icon-plus">
+          {% include 'icon-plus'%}
+        </span>
+      </div>
+      <div class="tt-collapse-content">{{ product.description }}
+      </div>
+    </div>
+  {%- when 'tab_same_html' -%}
+    <div class="tt-item{% if b_i.open_tab_by_default %} active{% endif %}">
+      <div class="tt-collapse-title">
+        <span class="tt-collapse-title_label">
+          Instructions
+        </span>
+        <span class="tt-icon tt-icon-minus">
+          {% include 'icon-minus'%}
+        </span>
+        <span class="tt-icon tt-icon-plus">
+          {% include 'icon-plus'%}
+        </span>
+      </div>
+      <div class="tt-collapse-content">{{ product.metafields.tab_contents.content_2.value }}</div>
+    </div>
+  {%- when 'tab_unique' -%}
+	{%- if product_meta[b_i.key] != blank -%}
+    <div class="tt-item{% if b_i.open_tab_by_default %} active{% endif %}">
+      <div class="tt-collapse-title">
+        <span class="tt-collapse-title_label">{{ b_i.title }}</span>
+        <span class="tt-icon tt-icon-minus">
+          {% include 'icon-minus'%}
+        </span>
+        <span class="tt-icon tt-icon-plus">
+          {% include 'icon-plus'%}
+        </span>
+      </div>
+      <div class="tt-collapse-content">{{ product_meta[b_i.key] }}</div>
+    </div>
+	{%- endif -%}
+  {%- when 'tab_review' -%}
+	{%- unless settings.selectedreviewaapp == 'alireviewapp' -%}
+	<div id="tab_review" class="tt-item{% if b_i.open_tab_by_default %} active{% endif %}">
+      <div class="tt-collapse-title">
+        <span class="tt-collapse-title_label">{{ b_i.title }}</span>
+        <span class="tt-icon tt-icon-minus">
+          {% include 'icon-minus'%}
+        </span>
+        <span class="tt-icon tt-icon-plus">
+          {% include 'icon-plus'%}
+        </span>
+      </div>
+      <div class="tt-collapse-content">
+        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.tab_contents.content_1.value }}</div>
+      </div>
+    </div>
+	{%- endunless -%}
+{%- endcase -%}
+{%- endfor -%}
+{%- endcapture -%}
+
+{%- if html_tabs != '' -%}
+  <div class="tt-collapse-block prpage-tabs">{{ html_tabs }}</div>
+{%- endif -%}
