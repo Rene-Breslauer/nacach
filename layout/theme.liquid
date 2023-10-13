@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_base }}">
   <meta name="author" content="{{ "general.meta.author" | t }}">
- 
+
 
   {%- if settings.favicon != blank and settings.use_favicon -%}
   	<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
@@ -139,30 +139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% if canonical_url contains '/tagged/' %}
   <meta name="robots" content="noindex, follow">
 {% endif %}
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Nacach Wax",
-  "address": {
-    "@type": "PostalAddress",
-    "postalCode": "33076",
-    "streetAddress": "11312 NW 81st Place",
-    "addressCountry": "1",
-    "addressLocality": "Parkland"
-  },
-  "image": "https://cdn.shopify.com/s/files/1/0315/1131/4570/files/nacach-logo_40db9dc6-3602-4e74-b21a-22b31fb21398.jpg?v=1680648960",
-  "telephone": "(866) 460-1460",
-  "priceRange": "$10-$300+",
-  "url": "https://www.nacach.com",
-  "sameAs": [
-    "https://www.facebook.com/NacachWax",
-    "https://www.instagram.com/nacachwax/",
-    "https://www.pinterest.com/nacachwax/",
-    "https://www.youtube.com/channel/UCyStaRBWhN-aWOFY2tkWujg"
-  ]
-}
-  </script>
+
 
 </head>
 <body class="page{{ template }}" {% if template contains '404' %}id="template404"{% elsif settings.use_scale_product_image %}
