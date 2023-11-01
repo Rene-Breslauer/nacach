@@ -211,6 +211,15 @@
         </thead>
         <tbody class="">
           {% for variant in product.variants %}
+          {% assign hideThisVariant = false %}
+  
+ 
+            {% if collection.handle contains 'wholesale-roll-on-wax' and variant.title contains '144 CT' %}
+              {% assign hideThisVariant = true %}
+
+            {% endif %}
+          
+          {% unless hideThisVariant %}
             {% assign variant_title_parts = variant.title | split: "<br>" %}
             {%- if variant.available == false and settings.show_unavailable_variants == false -%}{%- continue -%}{%- endif -%}
         
@@ -281,7 +290,8 @@
             <td>{{ variant_title_parts[1] }}</td>
           </tr>
         {%- endunless -%}
-          {% endfor %}
+      {% endunless %}
+      {% endfor %}
         </tbody>
       </table>
     </div>
