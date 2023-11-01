@@ -271,7 +271,17 @@
         </tr>
       </thead>
       <tbody>
+      
         {% for variant in product.variants %}
+           {% assign hideThisVariant = false %}
+  
+          {% for collection in product.collections %}
+            {% if collection.handle contains 'wholesale-roll-on-wax' and variant.title contains '144 CT' %}
+              {% assign hideThisVariant = true %}
+            {% endif %}
+          {% endfor %}
+          
+          {% unless hideThisVariant %}
           {% assign variant_title_parts = variant.title | split: "<br>" %}
         <tr {% if product.selected_or_first_available_variant.id == variant.id %} class="highlight"{% endif %}>
           <td>
@@ -302,6 +312,7 @@
           <td>{{ variant.price | money }}</td>
           <td>{{ variant_title_parts[1] }}</td>
         </tr>
+            {% endunless %}
         {% endfor %}
       </tbody>
     </table>
