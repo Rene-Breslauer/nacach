@@ -9,7 +9,7 @@
           <div class="tt-col-item tt-logo-col">
             <a href="/" class="tt-logo tt-logo-alignment">
               {%- if footerlogo contains "title_" -%}<h2 class="tt-title">{{ footerlogo | split:"title_" | last }}</h2>
-              {%- else -%}<img src="{{ footerlogo }}" srcset="{{ footerlogo }} 1x, {{ footerlogoretina }} 2x" alt="{{ shop.name }}" class="tt-retina">
+              {%- else -%}<img src="{{ footerlogo }}" srcset="{{ footerlogo }} 1x, {{ footerlogoretina }} 2x" alt="{{ footerlogoalt }}" class="tt-retina">
               {%- endif -%}
             </a>
           </div>
@@ -31,7 +31,7 @@
         <div class="tt-col-item tt-logo-col">
           <a href="/" class="tt-logo tt-logo-alignment">
             {%- if footerlogo contains "title_" -%}<h2 class="tt-title">{{ footerlogo | split:"title_" | last }}</h2>
-            {%- else -%}<img src="{{ footerlogo }}" srcset="{{ footerlogo }} 1x, {{ footerlogoretina }} 2x" alt="{{ shop.name }}" class="tt-retina">
+            {%- else -%}<img src="{{ footerlogo }}" srcset="{{ footerlogo }} 1x, {{ footerlogoretina }} 2x" alt="{{ footerlogoalt }}" class="tt-retina">
             {%- endif -%}
           </a>
         </div>

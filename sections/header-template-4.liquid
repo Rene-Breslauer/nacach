@@ -138,7 +138,7 @@
             {%- if headerlogomobile contains "title_" -%}<h2>{{ headerlogomobile | split:"title_" | last }}</h2>
             {%- else -%}<img src="{{ headerlogomobile }}"
                              srcset="{{ headerlogomobile }} 1x, {{ headerlogomobileretina }} 2x"
-                             alt="{{ shop.name }}"
+                             alt="{{ headerlogomobilealt }}"
                              class="tt-retina">
             {%- endif -%}
           </a>
@@ -322,7 +322,7 @@
             {%- if headerlogo contains "title_" -%}<h2 class="tt-title">{{ headerlogo | split:"title_" | last }}</h2>
             {%- else -%}<img src="{{ sheaderlogo }}"
                              srcset="{{ sheaderlogo }} 1x, {{ sheaderlogoretina }} 2x"
-                             alt="{{ shop.name }}"
+                             alt="{{ headerlogoalt }}"
                              class="tt-retina" itemprop="logo"/>
             {%- endif -%}
           </a>

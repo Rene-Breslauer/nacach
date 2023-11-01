@@ -145,7 +145,7 @@
         "d11729b7-7e0d-4aaf-9125-72e2e8b902b1": {
           "type": "step",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_44_large_17ff9fd3-c72f-4eb4-bf6c-e4d3b171f87e.jpg",
+            "image": "shopify:\/\/shop_images\/Untitled_design_44.png",
             "title": "Preparation",
             "content": "<p>Clean the skin and make sure it's devoid of oils or lotions. A light dusting of baby powder can be applied to absorb any excess moisture.<\/p>"
           }
@@ -153,7 +153,7 @@
         "8f908767-e8c4-4f2b-9bca-ab2ade1313a0": {
           "type": "step",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c6470d5418ab06e68b80b3f6fe14fcc3_large_c6a1a8b6-ef33-40dc-873b-f52267cf101d.jpg",
+            "image": "shopify:\/\/shop_images\/c6470d5418ab06e68b80b3f6fe14fcc3.png",
             "title": "Heating",
             "content": "<p>Warm the soft wax in a wax warmer until it's at a honey-like consistency.<\/p>"
           }
@@ -161,7 +161,7 @@
         "036c741c-d5f4-459e-b32a-d5d8ffae4fa6": {
           "type": "step",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_48_large_1.jpg",
+            "image": "shopify:\/\/shop_images\/Untitled_design_48.png",
             "title": "Application",
             "content": "<p>Using a spatula, apply a thin, even layer of the wax in the direction of hair growth.<\/p>"
           }
@@ -169,7 +169,7 @@
         "30a63492-038c-4cdd-81bb-96ddc82a6b23": {
           "type": "step",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_49.png",
+            "image": "shopify:\/\/shop_images\/c6470d5418ab06e68b80b3f6fe14fcc3.png",
             "title": "Removal",
             "content": "<p>Immediately press a waxing strip onto the wax, rub in the direction of hair growth, and then swiftly pull off the strip against the direction of hair growth.<\/p>"
           }
@@ -191,7 +191,6 @@
         "1a594f82-85f8-4164-bec6-d4f21b621ef9"
       ],
       "settings": {
-        "title": "How To Use Soft Wax"
       }
     },
     "61606b8d-352c-4727-9646-1dd4fd5d58b5": {

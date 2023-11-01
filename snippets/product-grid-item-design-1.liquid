@@ -141,14 +141,13 @@
     <div class="tt-price"><span>{{ pr_variant.price | money }}</span><span class="old-price hide"></span></div>
     {%- endif -%}
     {%- endunless -%}
-	{{ product.metafields.pricech.pricechart.value }}
+	{% comment %} {{ product.metafields.pricech.pricechart.value }} {% endcomment %}
     
     <div class="description" style="display:none;">{%- if product_meta.small_description != blank -%}{{ product_meta.small_description }}{%- else -%}{{ product.description | strip | strip_html | truncatewords: settings.truncate_product_description, settings.truncate_product_description_last_symbols }}{%- endif -%}</div>
-    
     {%- if product.available or settings.show_unavailable_variants -%}
     {%- include 'product-grid-options' -%}
 	{%- endif -%}
-    
+
     {%- unless settings.catalogue_mode -%}
     {%- if product.available -%}
     {%- if settings.product_item_show_cart or settings.product_item_show_quickview -%}
