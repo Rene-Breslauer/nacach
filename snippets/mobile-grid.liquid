@@ -1,0 +1,38 @@
+<style>
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+.grid-item--label {
+    background: rgba(255,255,255,0.8);
+    color: #191919;
+    padding: 10px;
+    font-weight: 600;
+}
+</style>
+<div class="grid-wrapper">
+{% for block in section.blocks %}
+    <style>
+        .bg-{{ block.id }} {
+            background-image: url('{{ block.settings.image | img_url: '1000x' }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <div class="grid-item bg-{{ block.id }}">
+        <a href="{{ block.settings.link }}" class="grid-item--label">
+            {{ block.settings.text1 }}
+        </a>
+    </div>
+{% endfor %}
+</div>

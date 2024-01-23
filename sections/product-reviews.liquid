@@ -1,0 +1,224 @@
+{% unless product.metafields.section.reviews.value == blank %}
+  <div class="reviews-container">
+    <div class="reviews-summary">
+      <div class="reviews-summaty__stars">
+        {% for i in (1..5) %}
+          {% include 'icon-review-lg'%}
+        {% endfor %}
+      </div>
+      <div class="reviews-summary__text">
+        {{ product.metafields.section.reviews.value.size }} Reviews
+      </div>
+    </div>
+    <h5 class="reviews-title">
+      What Our Customers Are Saying
+    </h5>
+  
+    <div class="blaze-slider blaze-reviews-slider">
+      <div class="blaze-container">
+        <div class="blaze-track-container">
+          <div class="blaze-track">
+            {% for review in product.metafields.section.reviews.value %}
+              <div class="review-slide">
+                <div class="review-stars">
+                  {% for i in (1..review.rating) %}
+                    {% include 'icon-review-sm'%}
+                  {% endfor %}
+                </div>
+                <p class="review-content">
+                  {{ review.review }}
+                </p>
+                <div class="review-meta">
+                  <h4 class="review-meta__name">
+                    {{ review.name }}
+                    <span>{% include 'icon-verified' %}</span>
+                  </h4>
+                  <p class="review-meta__date">
+                    {{ review.date }}
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="mt-10 blaze-pagination flex justify-center gap-3"></div>
+        <div class="blaze-reviews-controls">
+          <button class="blaze-prev" aria-label="Go to previous slide">
+            {% include 'icon-chevron-right' %}
+          </button>
+          <div class="blaze-pagination"></div>
+          <button class="blaze-next" aria-label="Go to next slide">
+            {% include 'icon-chevron-right' %}
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+{% endunless %}
+
+<script>
+  const renderReviewsSlider = () => {
+    let ele = document.querySelector('.blaze-reviews-slider');
+    const reviewsSlider = new BlazeSlider(ele, {
+      all: {
+        slidesToShow: 1.1,
+        enablePagination: true,
+      },
+      '(min-width: 640px)': {
+        slidesToShow: 1.8,
+      },
+      '(min-width: 768px)': {
+        slidesToShow: 2.5,
+      },
+      '(min-width: 1024px)': {
+        slidesToShow: 3,
+      },
+    });
+
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Your function goes here
+    renderReviewsSlider()
+  });
+</script>
+
+<style>
+  .blaze-reviews-slider {
+    max-width: 1204px;
+    margin: 0 auto;
+  }
+  .blaze-reviews-slider .blaze-container {
+    position: relative;
+  }
+  .blaze-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .blaze-pagination button {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 9999px;
+    background-color: rgba(0,0,0,.2);
+    font-size: 0px;
+    -webkit-appearance: none;
+    background-image: none;
+    border: none;
+    background-color: #00000033;
+  }
+  .blaze-pagination button.active {
+    background-color: #00000080;
+  }
+  .reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D5D3FA;
+    width: 100%;
+    padding: 35px 30px;
+    padding-right: 0;
+  }
+  .reviews-summary {
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .reviews-title {
+    margin: 0;
+    font-size: 22px !important;
+    paddding-top: 0 !important;
+    padding-right: 30px;
+  }
+  .blaze-reviews-slider {
+    width: 100%;
+  }
+  .blaze-reviews-controls {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+  }
+  .blaze-reviews-controls .blaze-prev,
+  .blaze-reviews-controls .blaze-next {
+    background: #fff;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  .blaze-reviews-controls .blaze-prev {
+    transform: rotate(180deg) translateX(50%);
+  }
+  .blaze-reviews-controls .blaze-next {
+    transform: translateX(50%);
+  }
+  .review-slide {
+    background-color: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .review-content {
+    margin: 0 !important;
+  }
+  .review-meta .review-meta__name {
+    color: #191919;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Hind;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; /* 157.143% */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .review-meta .review-meta__date {
+    color: #777;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Hind;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    margin: 0 !important;
+  }
+  @media (min-width: 1024px) {
+    .blaze-reviews-controls .blaze-next {
+      transform: translateX(50%) !important;
+      paddding-right: 0px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product Reviews",
+  "presets": [
+    {
+      "name": "Product Reviews"
+    }
+  ]
+}
+{% endschema %}
