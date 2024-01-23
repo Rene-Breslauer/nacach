@@ -29,10 +29,10 @@
             background-repeat: no-repeat;
         }
     </style>
-    <div class="grid-item bg-{{ block.id }}">
-        <a href="{{ block.settings.link }}" class="grid-item--label">
+    <a href="{{ block.settings.link }}" class="grid-item bg-{{ block.id }}">
+        <div  class="grid-item--label">
             {{ block.settings.text1 }}
-        </a>
-    </div>
+        </div>
+    </a>
 {% endfor %}
 </div>
