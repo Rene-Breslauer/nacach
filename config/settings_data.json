@@ -1992,6 +1992,27 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
         }
+      },
+      "2131494470682214141": {
+        "type": "shopify:\/\/apps\/corner-cart-drawer-free-gift\/blocks\/corner-widget\/73667a27-0d48-44b7-91f9-aef741c803ed",
+        "disabled": false,
+        "settings": {
+          "elementToReplaceInCartPage": "main",
+          "hide_theme_cart": false
+        }
+      },
+      "9776720720251544092": {
+        "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
+        "disabled": false,
+        "settings": {
+          "registration_form_id": "",
+          "edit_account_form_id": "",
+          "edit_account_link_text": "Edit account",
+          "edit_account_heading": "Edit account",
+          "edit_account_back_link_text": "Back to account",
+          "enable_js_api": false,
+          "js_api_version": ""
+        }
       }
     }
   }
