@@ -1993,14 +1993,6 @@
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
         }
       },
-      "2131494470682214141": {
-        "type": "shopify:\/\/apps\/corner-cart-drawer-free-gift\/blocks\/corner-widget\/73667a27-0d48-44b7-91f9-aef741c803ed",
-        "disabled": false,
-        "settings": {
-          "elementToReplaceInCartPage": "main",
-          "hide_theme_cart": false
-        }
-      },
       "9776720720251544092": {
         "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
         "disabled": false,
@@ -2024,6 +2016,14 @@
         "type": "shopify:\/\/apps\/bogos-io-free-gift\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
         "disabled": false,
         "settings": {
+        }
+      },
+      "124348908681409149": {
+        "type": "shopify:\/\/apps\/simple-bundles-kits\/blocks\/simple-bundles-v2\/e553276b-36b2-446d-b80a-aa47fe5f96ac",
+        "disabled": false,
+        "settings": {
+          "select_placeholder": "Please select an option",
+          "disable_oos_options": true
         }
       }
     }
