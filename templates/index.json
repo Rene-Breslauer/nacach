@@ -5,6 +5,7 @@
       "blocks": {
         "slider_list_r6chJE": {
           "type": "slider_list",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Valentine_s-Banner-Desktop.jpg",
             "banner_link": "https:\/\/nacach.com\/discount\/VDAY24",
