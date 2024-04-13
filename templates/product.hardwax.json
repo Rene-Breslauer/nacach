@@ -128,7 +128,8 @@
             "aggregated": false,
             "limit": 20,
             "hide_thumbnails": false,
-            "maxwidth": 1080
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
@@ -191,6 +192,7 @@
         "1a594f82-85f8-4164-bec6-d4f21b621ef9"
       ],
       "settings": {
+        "title": "How To Use Hard Wax"
       }
     },
     "61606b8d-352c-4727-9646-1dd4fd5d58b5": {
