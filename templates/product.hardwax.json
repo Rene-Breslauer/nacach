@@ -1,5 +1,17 @@
 {
   "sections": {
+    "index_section_custom_html_YK7XPe": {
+      "type": "index-section-custom_html",
+      "settings": {
+        "topoffset": true,
+        "fullwidth": false,
+        "fullwidth2": false,
+        "data": "{% if product.title contains 'gold' or product.title contains 'vibes' %}<h4 style=\"color:white;\">This product is backordered: Orders placed will be shipped out on or after May 22nd<\/h4>{% endif %}",
+        "usebgcolor": false,
+        "usebgcolorfullwidth": false,
+        "bgco": "#ffffff"
+      }
+    },
     "main": {
       "type": "product-template",
       "blocks": {
@@ -209,6 +221,7 @@
     }
   },
   "order": [
+    "index_section_custom_html_YK7XPe",
     "main",
     "loox-product-reviews-app-section",
     "e4e4ffd4-4395-4648-9edc-4fc8f296600a",
