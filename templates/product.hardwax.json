@@ -6,7 +6,7 @@
         "topoffset": true,
         "fullwidth": false,
         "fullwidth2": false,
-        "data": "{% if product.title contains 'gold' or product.title contains 'vibes' %}<h4 style=\"color:white;\">This product is backordered: Orders placed will be shipped out on or after May 22nd<\/h4>{% endif %}",
+        "data": "{% if product.title contains 'Moroccan Gold' or product.title contains 'vibes' %}<h4 style=\"color:white;\">This product is backordered: Orders placed will be shipped out on or after May 22nd<\/h4>{% endif %}",
         "usebgcolor": false,
         "usebgcolorfullwidth": false,
         "bgco": "#ffffff"
