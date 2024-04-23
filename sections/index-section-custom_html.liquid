@@ -1,8 +1,22 @@
 {%- assign item = section.settings -%}
-<div class="container-indent{% unless item.topoffset %} nomargin{% endunless %}"{% if item.usebgcolor and item.usebgcolorfullwidth %} style="background: {{ item.bgco }}"{% endif %}>
-  <div{% unless item.fullwidth2 %} class="container{% if item.fullwidth %}-fluid-custom container-fluid-custom-mobile-padding{% endif %}"{% endunless %}{% if item.usebgcolor and item.usebgcolorfullwidth == false %} style="background: {{ item.bgco }}"{% endif %}>
-    {%- if item.data contains '[images]' -%}{% include 'portfolio-widget' value: item.data %}
-    {%- else -%}{{ item.data }}
+<div
+  class="container-indent{% unless item.topoffset %} nomargin{% endunless %}"
+  {% if item.usebgcolor and item.usebgcolorfullwidth %}
+    style="background: {{ item.bgco }}"
+  {% endif %}
+>
+  <div
+    {% unless item.fullwidth2 %}
+      class="container{% if item.fullwidth %}-fluid-custom container-fluid-custom-mobile-padding{% endif %}"
+    {% endunless -%}
+    {% if item.usebgcolor and item.usebgcolorfullwidth == false %}
+      style="background: {{ item.bgco }}"
+    {% endif %}
+  >
+    {%- if item.data contains '[images]' -%}
+      {% include 'portfolio-widget', value: item.data %}
+    {%- else -%}
+      {{ item.data }}
     {%- endif -%}
   </div>
 </div>
@@ -32,7 +46,7 @@
 	  "info": "Work with option \"Fullwidth Container\""
     },
     {
-      "type": "textarea",
+      "type": "liquid",
       "id": "data",
       "label": "Content"
     },
