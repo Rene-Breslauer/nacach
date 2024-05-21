@@ -2,6 +2,7 @@
   "sections": {
     "index_section_custom_html_YK7XPe": {
       "type": "index-section-custom_html",
+      "disabled": true,
       "settings": {
         "topoffset": true,
         "fullwidth": false,
